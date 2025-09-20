@@ -1,0 +1,118 @@
+body {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    position: relative;
+}
+
+/* Dark overlay to keep text readable */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20, 30, 50, 0.5); /* slightly blueish overlay */
+    z-index: 0;
+}
+
+/* Weather card container */
+.weather-container {
+    position: relative; /* above overlay */
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.08); /* very light transparency */
+    backdrop-filter: blur(10px); /* nice frosted glass effect */
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 25px;
+    font-size: 2em;
+    color: #ffd166; /* warm yellow to pop against blue background */
+}
+
+/* Input box */
+input {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-align: center;
+}
+
+input::placeholder {
+    color: #e0e0e0;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #ffd166, #ef476f);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ef476f, #ffd166);
+}
+
+/* Weather box */
+.weather-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Weather icon */
+.weather-box i {
+    font-size: 3em;
+    color: #ffd166; /* matches heading */
+}
+
+/* City name */
+.weather-box h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffd166;
+}
+
+/* Condition & temp */
+.weather-box p {
+    margin: 2px 0;
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+.heading-icon {
+    width: 40px;      /* adjust size */
+    height: 40px;
+    vertical-align: middle; /* aligns icon with text */
+    margin-right: 10px;      /* spacing between icon and heading text */
+}

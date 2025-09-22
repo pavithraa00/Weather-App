@@ -11,7 +11,6 @@ body {
     position: relative;
 }
 
-/* Dark overlay to keep text readable */
 body::before {
     content: '';
     position: absolute;
@@ -19,16 +18,15 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(20, 30, 50, 0.5); /* slightly blueish overlay */
+    background-color: rgba(20, 30, 50, 0.5); 
     z-index: 0;
 }
 
-/* Weather card container */
 .weather-container {
     position: relative; /* above overlay */
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.08); /* very light transparency */
-    backdrop-filter: blur(10px); /* nice frosted glass effect */
+    background-color: rgba(255, 255, 255, 0.08); /
+    backdrop-filter: blur(10px);
     padding: 40px 30px;
     border-radius: 20px;
     width: 350px;
@@ -37,14 +35,12 @@ body::before {
     border: 1px solid rgba(255,255,255,0.2);
 }
 
-/* Heading */
 h1 {
     margin-bottom: 25px;
     font-size: 2em;
-    color: #ffd166; /* warm yellow to pop against blue background */
+    color: #ffd166;
 }
 
-/* Input box */
 input {
     width: 80%;
     padding: 12px;
@@ -61,7 +57,6 @@ input::placeholder {
     color: #e0e0e0;
 }
 
-/* Button */
 button {
     padding: 12px 25px;
     border-radius: 10px;
@@ -77,7 +72,6 @@ button:hover {
     background: linear-gradient(135deg, #ef476f, #ffd166);
 }
 
-/* Weather box */
 .weather-box {
     margin-top: 25px;
     padding: 20px;
@@ -94,7 +88,7 @@ button:hover {
 /* Weather icon */
 .weather-box i {
     font-size: 3em;
-    color: #ffd166; /* matches heading */
+    color: #ffd166;
 }
 
 /* City name */
@@ -111,8 +105,8 @@ button:hover {
     color: #e0e0e0;
 }
 .heading-icon {
-    width: 40px;      /* adjust size */
+    width: 40px;    
     height: 40px;
-    vertical-align: middle; /* aligns icon with text */
-    margin-right: 10px;      /* spacing between icon and heading text */
+    vertical-align: middle; 
+    margin-right: 10px;      
 }
